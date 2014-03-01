@@ -1,0 +1,10 @@
+{
+  "description": "Ember route",
+  "files": [
+    {
+      "from": "route.js.hbs",
+      "to": "app/routes/{{dasherize name}}.js"
+    }
+  ],
+  "dependencies": []
+}

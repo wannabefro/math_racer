@@ -1,0 +1,14 @@
+{
+  "description": "Ember view",
+  "files": [
+    {
+      "from": "view.js.hbs",
+      "to": "app/views/{{dasherize name}}.js"
+    },
+    {
+      "from": "test.js.hbs",
+      "to": "test/code/view/{{dasherize name}}.js"
+    }
+  ],
+  "dependencies": []
+}

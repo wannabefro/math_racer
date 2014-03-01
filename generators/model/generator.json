@@ -1,0 +1,14 @@
+{
+  "description": "Ember object to be used as a model",
+  "files": [
+    {
+      "from": "model.js.hbs",
+      "to": "app/models/{{dasherize name}}.js"
+    },
+    {
+      "from": "test.js.hbs",
+      "to": "test/code/models/{{dasherize name}}.js"
+    }
+  ],
+  "dependencies": []
+}
