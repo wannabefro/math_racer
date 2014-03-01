@@ -7,7 +7,7 @@ exports.config = {
 
   server: {
     path: 'server',
-    port: 3333
+    port: 3000
   },
 
   files: {

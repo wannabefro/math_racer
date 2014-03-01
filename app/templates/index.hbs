@@ -1,1 +1,14 @@
-<h1>Cinder Brunch</h1>
+<h1>
+  {{#if currentUser}}
+    Welcome back to Math Racer {{currentUser.name}}
+  {{else}}
+    Welcome to Math Racer {{name}}
+  {{/if}}
+</h1>
+{{#unless currentUser}}
+<form>
+  {{input value=name}}
+  <button type='submit' {{action 'newUser' name}}>Join</button>
+</form>
+{{/unless}}
+{{#link-to 'games'}}Play now{{/link-to}}

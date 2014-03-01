@@ -1,0 +1,14 @@
+<h1>Solo Game</h1>
+  <p>Current streak: {{streak}}</p>
+{{#unless playing}}
+  {{view Ember.Select content=difficulties value=difficulty}}
+  <br>
+  <button {{action 'start'}}>Start Game</button>
+{{/unless}}
+{{#if playing}}
+  <li><a href='#' {{action 'restart'}}>Start again</a></li>
+  <p>{{attempts}} {{inflect attempts "attempt" "attempts"}} so far</p>
+  {{question}}<br>
+  {{input value=answer}}
+  <button {{action 'answerQuestion' answer}}>Answer</button>
+{{/if}}
