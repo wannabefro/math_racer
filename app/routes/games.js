@@ -22,12 +22,7 @@ App.GamesRoute = Ember.Route.extend({
       var correctAnswer = eval(question);
       var controller = this.controllerFor(controller);
       if (correctAnswer === Number(answer)){
-        controller.set('currentQuestion', null);
-        controller.set('attempts', 0);
-        controller.incrementProperty('streak');
-      } else {
-        controller.incrementProperty('attempts');
-        controller.set('streak', 0);
+        controller.set('correct', true);
       }
       controller.set('answer', null);
     },

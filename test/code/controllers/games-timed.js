@@ -1,12 +1,12 @@
 'use strict';
 
-describe('GamesPracticeController', function() {
-  var gamesSoloController;
+describe('GamesTimedController', function() {
+  var gamesTimedController;
 
   beforeEach(function() {
     Ember.run(function() {
       App.reset();
-      gamesPracticeController = App.GamesPracticeController.create();
+      gamesTimedController = App.GamesTimedController.create();
     });
   });
 
@@ -16,7 +16,7 @@ describe('GamesPracticeController', function() {
 
   afterEach(function() {
     Ember.run(function() {
-      gamesPracticeController.destroy();
+      gamesTimedController.destroy();
     });
   });
 });

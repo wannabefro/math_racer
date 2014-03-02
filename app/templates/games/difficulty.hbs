@@ -1,0 +1,5 @@
+{{#unless playing}}
+  {{view Ember.Select content=difficulties value=difficulty}}
+  <br>
+  <button {{action 'start'}}>Start Game</button>
+{{/unless}}

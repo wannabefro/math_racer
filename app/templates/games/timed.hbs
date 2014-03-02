@@ -1,0 +1,11 @@
+<h1>Time attack</h1>
+
+{{partial 'games/difficulty'}}
+
+{{#if playing}}
+  <h3>Time Remaining: {{timeLeft}}</h3>
+  <h3>Score: {{score}}</h3>
+  {{question}}<br>
+  {{input value=answer}}
+  <button {{action 'answer' answer}}>Answer</button>
+{{/if}}
