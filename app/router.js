@@ -6,6 +6,6 @@ App.Router.reopen({
 
 App.Router.map(function() {
   this.resource('games', function(){
-    this.route('solo');
+    this.route('practice');
   });
 });
