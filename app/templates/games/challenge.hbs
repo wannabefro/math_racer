@@ -1,13 +1,19 @@
-<h1>Time attack</h1>
-
-{{partial 'games/difficulty'}}
+<h1>Challenge</h1>
+{{#unless playing}}
+<li><a href="#" {{action 'start'}}>Start</a></li>
+{{/unless}}
 
 {{#if gameOver}}
   <p>Good job. You scored {{inflect score "point" "points" true}}</p>
 {{/if}}
+
 {{#if playing}}
   <h3>Time Remaining: {{timeLeft}}</h3>
   <h3>Score: {{score}}</h3>
+  <h3>Streak: {{streak}}</h3>
+  <h3>Point value: {{pointValue}}</h3>
+  <h3>{{difficulty}}</h3>
+  <h3>{{difficultyGap}}</h3>
   {{question}}<br>
   {{input value=answer}}
   <button {{action 'answer' answer}}>Answer</button>

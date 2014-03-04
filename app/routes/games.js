@@ -1,6 +1,6 @@
 App.GamesRoute = Ember.Route.extend({
   actions: {
-    makeQuestion: function(difficulty, parameters, controller){
+    makeQuestion: function(modifier, parameters, controller){
       var question = '';
       var numbers = [];
       var operators = [];
@@ -16,7 +16,12 @@ App.GamesRoute = Ember.Route.extend({
       numbers = _.sortBy(numbers).reverse();
       question = _.zip(numbers, operators);
       question = question.join('').replace(/,/g, '');
-      this.controllerFor(controller).set('currentQuestion', question);
+      var answer = eval(question);
+      if (answer > 0 && answer % 1 === 0 && answer <= modifier){
+        this.controllerFor(controller).set('currentQuestion', question);
+      } else {
+        this.send('makeQuestion', modifier, parameters, controller);
+      }
     },
     answerQuestion: function(question, answer, controller){
       var correctAnswer = eval(question);
