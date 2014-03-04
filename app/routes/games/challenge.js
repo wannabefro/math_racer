@@ -5,7 +5,7 @@ App.GamesChallengeRoute = Ember.Route.extend({
       var parameters = controller.get('parameters');
       var streak = controller.get('streak');
       var score = controller.get('score');
-      if (score % 7 === 0){
+      if (streak % 3 === 0){
         this.controller.incrementProperty('difficultyGap');
         parameters['max'] += 2;
       };
@@ -44,7 +44,7 @@ App.GamesChallengeRoute = Ember.Route.extend({
     },
     lowerTime: function(){
       var timePerQuestion = this.controller.get('timePerQuestion');
-      this.controller.set('timePerQuestion', Math.round(timePerQuestion * 0.9));
+      this.controller.set('timePerQuestion', Math.round(timePerQuestion * 0.92));
     },
     addCombination: function(){
       var parameters = this.controller.get('parameters');
